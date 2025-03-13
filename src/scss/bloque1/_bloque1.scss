@@ -1,0 +1,491 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.bloque1 {
+    height: auto;
+    // background-color: green;
+    // max-height: 120rem;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    @include m.desktop_1020 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+// .bloque1Container {
+//     background-color: red;
+//     // width: 30rem;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     height: auto;
+
+// }
+
+.bloque1Left {
+    height: 100vh;
+    width: 100%;
+    // background: 60%/cover no-repeat url(https://upch-repo-comercial.s3.dualstack.us-east-1.amazonaws.com/06-03-25/ad-salud-pge-top.webp);
+    overflow: hidden;
+    position: relative;
+    // width: 100%;
+    // text-align: center;
+    display: flex;
+    justify-content: center;
+    @include m.desktop_1020 {
+        justify-content: flex-start;
+    }
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: 60%;
+    }
+    .adm-salud--logo {
+        width: auto;
+        height: 6rem;
+        position: absolute;
+        top: 1rem;
+        left: 2.5rem;
+        @include m.phone_360 {
+            top: 2rem;
+            height: 6.5rem;
+        }
+        @include m.desktop_1020 {
+            left: 5rem;
+        }
+        @include m.desktop_1200 {
+            left: 8rem;
+            height: 8rem;
+        }
+        @include m.desktop_1300 {
+            left: 10rem;
+        }
+        @include m.desktop_1400 {
+            left: 12rem;
+        }
+        @include m.desktop_1600 {
+            height: 10rem;
+        }
+        @include m.desktop_1800 {
+            left: 15rem;
+        }
+    }
+    .bloque1TitleContainer {
+        width: 26rem;
+        // background-color: purple;
+        height: auto;
+        position: absolute;
+        z-index: 10;
+        bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        @include m.phone_360 {
+            bottom: 5rem;
+            width: 30.5rem;
+            // padding: 0 4rem;
+        }
+        @include m.phone_390 {
+            width: 33.5rem;    
+        }
+        @include m.phone_414 {
+            width: 36rem;    
+        }
+        @include m.phone_428 {
+            width: 37.5rem;    
+        }
+        @include m.desktop_1020 {
+            bottom: 6rem;
+            padding-left: 5rem;
+        }
+        @include m.desktop_1100 {
+            bottom: 8rem;
+        }
+        @include m.desktop_1200 {
+            padding-left: 8rem;
+            width: 44.5rem;
+            // background-color: purple;
+            row-gap: 1.5rem;
+        }
+        @include m.desktop_1300 {
+            padding-left: 10rem;
+        }
+        @include m.desktop_1400 {
+            padding-left: 12.5rem;    
+            row-gap: 2rem;
+            // background-color: purple;
+            width: 52.5rem;
+        }
+        @include m.desktop_1500 {
+            width: 55.5rem;
+        }
+        @include m.desktop_1600 {
+            // background-color: purple;
+            width: 65rem;    
+        }
+        @include m.desktop_1700 {
+            padding-left: 15.5rem;    
+        }
+        .bloque1TitleContainer--nueva {
+            background-color: v.$color1;
+            width: 15rem;
+            display: flex;
+            column-gap: .7rem;
+            justify-content: center;
+            align-items: center;
+            height: 2.5rem;
+            border-radius: 1rem;
+            @include m.desktop_1200 {
+                width: 18rem;
+                height: 3.5rem;
+            }
+            @include m.desktop_1600 {
+                width: 24rem;
+                height: 4.5rem;
+                column-gap: 1rem;
+            }
+            img {
+                width: auto;
+                height: 1.6rem;
+                filter: brightness(0) saturate(100%) invert(100%) sepia(4%) saturate(7486%) hue-rotate(315deg) brightness(104%) contrast(121%);
+                @include m.desktop_1200 {
+                    height: 1.8rem;
+                }
+                @include m.desktop_1600 {
+                    height: 3rem;
+                }
+            }
+            h3 {
+                margin: 0;
+                font-size: 1.4rem;
+                color: white;
+                @include m.desktop_1200 {
+                    font-size: 1.6rem;
+                }
+                @include m.desktop_1600 {
+                    font-size: 2.2rem;
+                }
+            }
+        }
+        .bloque1TitleContainerTitle {
+            display: flex;
+            flex-direction: column;
+            h4 {
+                margin: 0;
+                font-size: 1.8rem;
+                color: white;
+                font-weight: 500;
+                @include m.phone_360 {
+                    font-size: 2rem;
+                }
+                @include m.desktop_1200 {
+                    font-size: 2.3rem;
+                }
+                @include m.desktop_1600 {
+                    font-size: 2.7rem;
+                }
+            }
+            .bloque1TitleContainer--title1 {
+                h4 {
+                    font-size: 2.5rem;
+                    font-weight: 700;
+                    @include m.phone_360 {
+                        font-size: 3rem;
+                    }
+                    @include m.phone_360 {
+                        font-size: 3.2rem;
+                    }
+                    @include m.desktop_1200 {
+                        font-size: 3.5rem;
+                    }
+                    @include m.desktop_1600 {
+                        font-size: 4.5rem;
+                    }
+                }
+            }
+            .bloque1TitleContainer--title2 {
+                h4 {
+                    font-size: 3rem;
+                    font-weight: 700;
+                    @include m.phone_360 {
+                        font-size: 3.5rem;
+                    }
+                    @include m.phone_390 {
+                        font-size: 3.8rem;
+                    }
+                    @include m.phone_428 {
+                        font-size: 4rem;
+                    }
+                    @include m.desktop_1200 {
+                        font-size: 4.3rem;
+                    }
+                    @include m.desktop_1400 {
+                        font-size: 4.7rem;
+                    }
+                    @include m.desktop_1500 {
+                        font-size: 5rem;
+                    }
+                    @include m.desktop_1600 {
+                        font-size: 6rem;
+                    }
+                }
+            }
+        }
+        .bloque1TitleContainer--fecha {
+            h3 {
+                margin: 0;
+                font-size: 1.5rem;
+                font-weight: 500;
+                color: white;
+                @include m.phone_360 {
+                    font-size: 1.8rem;
+                }
+                @include m.desktop_1200 {
+                    font-size: 2rem;
+                }
+                @include m.desktop_1600 {
+                    font-size: 2.4rem;
+                }
+            }
+        }
+    }
+}
+
+.bloque1Right {
+    height: auto;
+    background-color: white;
+    position: relative;
+    padding: 8rem 0;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    overflow: hidden;
+    @include m.desktop_1020 {
+        padding: 0;
+        // align-items: flex-end;
+    }
+    .logo_desktop {
+        display: none;
+        @include m.desktop_1020 {
+            display: block;
+            position: absolute;
+            top:3rem;
+            right: 4rem;
+            width: 20rem;
+            z-index: 10;
+        }
+        @include m.desktop_1200 {
+            right: 8rem;
+        }
+        @include m.desktop_1300 {
+            width: 25rem;
+        }
+    }
+    .bloque1RightContainer {
+        height: auto;
+        // background-color: rgba(205, 201, 201, 0.507);
+        width: 27rem;
+        position: relative;
+        z-index: 5;
+        @include m.desktop_1020 {
+            bottom: -5rem;
+            width: 35rem;
+        }
+        @include m.desktop_1200 {
+            width: 45rem;
+        }
+    }
+    .rightImage1,
+    .rightImage2 {
+        width: 30rem;
+        position: absolute;
+        z-index: 0;
+    }
+    .rightImage1 {
+        top: 0;
+        left: 0;
+    }
+    .rightImage2 {
+        bottom: 0;
+        right: 0;
+    }
+}
+
+.bloque1Grid {
+    display: grid;
+    row-gap: 1rem;
+    @include m.desktop_1020 {
+        row-gap: 1.5rem;
+    }
+    @include m.desktop_1300 {
+        row-gap: 2rem;
+    }
+    input, select {
+        width: 100%;
+        height: 4rem;
+        padding-left: 1rem;
+        outline: none;
+        border: 2px solid black;
+        border-radius: 10px;
+        background-color: transparent;
+        font-size: 1.4rem;
+        color: black;
+        @include m.desktop_1300 {
+            height: 4.8rem;
+        }
+    }
+}
+
+.bloque1Title  {
+    // background-color: red;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+    h3 {
+        margin: 0;
+        width: 100%;
+        // background-color: green;
+        text-align: center;
+        font-size: 2.5rem;
+        color: black;
+        font-weight: 600;
+        @include m.desktop_1200 {
+            font-size: 2rem;
+        }
+        @include m.desktop_1300 {
+            font-size: 2.5rem;
+        }
+        span {
+            font-weight: 800;
+            font-size: 2.5rem;
+            @include m.desktop_1200 {
+                font-size: 2.6rem;
+            }
+        }
+    }
+}
+
+.inpudouble {
+    // background-color: red;
+    display: grid;
+    row-gap: 1rem;
+    @include m.desktop_1020 {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: none;
+        column-gap: 1rem;
+    }
+    @include m.desktop_1300 {
+        column-gap: 2rem;
+    }
+    input, select {
+        outline: none;
+        width: 100%;
+        height: 4rem;
+        padding-left: 1rem;
+        @include m.desktop_1300 {
+            height: 4.8rem;
+        }
+    }
+}
+
+.bloqueTerminos {
+    // background-color: green;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    padding: 1.5rem 0;
+    @include m.desktop_1020 {
+        grid-template-columns: 8% 92%;
+    }
+    @include m.desktop_1300 {
+        padding: 2rem 0;
+    }
+    h3 {
+        margin: 0;
+        color: black;
+        font-weight: 600;
+        @include m.desktop_1020 {
+            font-size: 1.3rem;
+        }
+        @include m.desktop_1300 {
+            font-size: 1.6rem;
+        }
+    }
+    input {
+        transform: scale(.5);
+        @include m.desktop_1020 {
+            transform: scale(.8);
+        }
+        @include m.desktop_1300 {
+            transform: scale(.95);
+        }
+    }
+}
+
+.bloqueButton {
+    @include m.desktop_1020 {
+        // margin-top: 2rem;
+    }
+    button {
+        width: 100%;
+        height: 5rem;
+        background-color: black;
+        border: none;
+        border-radius: 1.5rem;
+        @include m.desktop_1300 {
+            height: 6rem;
+        }
+        h3 {
+            font-size: 1.5rem;
+            color: white;
+            margin: 0;
+            @include m.desktop_1300 {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+.captcha {
+    height: 7.9rem !important;
+    // background-color: orange;
+    overflow: hidden;
+    // margin-bottom: 1rem !important;
+    display: flex;
+    justify-items: center;
+    width: 26.5rem;
+    // background-color: red;
+    align-items: flex-start;
+    padding-left: .5rem;
+    @include m.desktop_1020 {
+        // margin-bottom: .5rem !important;
+        // width: 20rem;
+        width: 35rem;
+        padding-left: 5.2rem;
+        // padding-left: 10rem;
+    }
+    @include m.desktop_1200 {
+        padding-left: 25.5%;
+        width: 45rem;
+        // height: 5rem !important;
+        // width: 45rem;
+    }
+}
+
+.g-recaptcha {
+    height: auto;
+    // padding-left: 10rem;
+    // padding-top: .4rem;
+    transform: scale(0.86);
+    // width: 100%;
+    transform-origin: 0 0;
+    @include m.desktop_1020 {
+        transform: scale(0.8);
+    }
+    @include m.desktop_1200 {
+        transform: scale(0.72);
+    }
+}

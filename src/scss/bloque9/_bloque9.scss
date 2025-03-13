@@ -1,0 +1,455 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.bloque9 {
+    background-color: v.$color1;
+    height: auto;
+    padding-top: 10rem;
+    padding-bottom: 17rem;
+    // padding: 8rem 0;
+    position: relative;
+    overflow: hidden;
+    @include m.phone_375 {
+      padding-top: 12rem;
+      padding-bottom: 16rem;
+    }
+    @include m.tablet_768 {
+      padding: 0;
+    }
+}
+
+.bloque9Container {
+    height: 40rem;
+    // background-color: white;
+    // position: relative;
+    z-index: 10;
+    @include m.tablet_768 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      height: 50rem;
+    }
+    @include m.desktop_1020 {
+      height: 65rem;
+    }
+    @include m.desktop_1300 {
+      height: 75rem;
+    }
+    @include m.desktop_1640 {
+      height: 85rem;
+    }
+}
+
+.bloque9DesktopCampus {
+  display: none;
+  @include m.tablet_768 {
+    background: center/cover no-repeat url(https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/pge-enfermeria-campus.webp);
+  }
+}
+
+.bloque9Back {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: -10%;
+    @include m.tablet_768 {
+      right: -70%;
+      bottom: -5%;
+    }
+}
+
+.bloque9Title {
+    // background-color: v.$color1;
+    // padding-top: 3rem;
+    text-align: center;
+    padding-bottom: 4rem;
+    // padding-top: 2rem;
+    // padding-top: 8rem;
+    display: grid;
+    justify-items: center;
+    width: 100%;
+    row-gap: 1rem;
+    // background-color: purple;
+    @include m.tablet_768 {
+      height: 100%;
+      position: relative;
+      z-index: 10;
+      padding-top: 8rem;
+      display: block;
+    }
+    @include m.desktop_1020 {
+      padding-top: 14rem;
+    }
+    @include m.desktop_1300 {
+      padding-top: 20rem;
+    }
+    h3 {
+      padding: 0;
+      margin: 0;
+      color: black;
+      font-weight: 500;
+      font-size: 2.5rem;
+      width: 75%;
+      // background-color: orange;
+      @include m.tablet_768 {
+        width: 80%;
+        text-align: start;
+        margin-left: 3rem;
+        font-size: 2.8rem;
+      }
+      @include m.desktop_1020 {
+        width: 55%;
+      }
+      @include m.desktop_1200 {
+        font-size: 3.8rem;
+        margin-left: 4rem;
+        width: 80%;
+      }
+      span {
+        font-weight: 800;
+      }
+    }
+    h4 {
+        width: 70%;
+        margin: 0;
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: black;
+        @include m.tablet_768 {
+          // background-color: green;
+          margin-left: 3rem;
+          margin-top: 1rem;
+          width: 80%;
+          text-align: start;
+          font-size: 1.4rem;
+        }
+        @include m.desktop_1020 {
+          margin-top: 2rem;
+        }
+        @include m.desktop_1200 {
+          margin-left: 4rem;
+          font-size: 2rem;
+        }
+    }
+}
+
+.bloque9TitleDesktop {
+  display: none;
+  @include m.tablet_768 {
+    display: block;
+    // background-color: orange;
+    height: auto;
+    margin-left: 3rem;
+    width: 80%;
+    margin-top: 4rem;
+    border-top: 1px solid black;
+  }
+  @include m.desktop_1200 {
+    margin-left: 4rem;
+  }
+  .central {
+    padding-top: 2rem;
+    @include m.desktop_1020 {
+      padding-top: 4rem;
+    }
+  }
+  h3 {
+    @include m.tablet_768 {
+      margin: 0;
+      font-size: 1.6rem;
+      color: black;
+      font-weight: 500;
+      padding: .5rem 0;
+    }
+    @include m.desktop_1200 {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.bloque9DesktopCampus {
+  display: none;
+  @include m.tablet_768 {
+    display: block;
+  }
+}
+
+  .bloque9Slider {
+    // background-color: green;
+ 
+    position: relative;
+    // margin-top: 2rem;
+    // background-color: green;
+    z-index: 5 !important;
+    // background-color: v.$color1;
+    @include m.tablet_768 {
+      display: none;
+    }
+  }
+
+  .slider__container6 {
+    height: auto;
+    position: relative;
+    // max-width: v.$max-width;
+    width: 100%;
+    // background-color: v.$color1;
+    padding-bottom: 0 !important;
+   
+    @include m.phone_375 {
+        // padding-top: 3rem;
+    }
+    @include m.tablet_760 {
+        max-width: 55rem;
+    }
+    @include m.desktop_1000 {
+        overflow: hidden;
+    }
+    @include m.desktop_1020 {
+        // max-width: v.$max-width-1020;
+        max-width: 95rem;
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr);
+        height: 40rem;
+        width: 90rem;
+    }
+  }
+  
+  .slider__grid6 {
+    position: relative;
+    display: flex;
+    height: auto;
+   
+
+    @include m.desktop_1020 {
+        overflow: visible !important;
+        padding-top: 1rem;
+        height: 100%;
+        position: absolute;
+        // margin-top: 6rem;
+        // background-color: purple;
+        width: 100%;
+        // display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @include m.desktop_1220 {
+        padding-top: 3rem;
+    }
+  }
+  
+  // .slider__item3 {
+  //   transform: scale(.85) !important;
+  // }
+  
+  // .slider__item3.swiper-slide-next {
+  //   // background-color: green;
+  //   transform: scale(1.08) !important;
+  // }
+  
+  // .slider__item3-active {
+  //   background-color: purple !important;
+  // }
+  
+  .slider__item6.swiper-slide {
+    // margin-top: 4rem;
+    height: auto;
+    position: relative;
+    display: grid !important;
+    width: 100%;
+    // align-content: center;
+    justify-items: center;
+    // margin-bottom: 3rem;
+   
+    @include m.tablet_760 {
+        // padding-bottom: 8rem;
+    }
+    @include m.desktop_1020 {
+        padding-bottom: 0;
+        // margin-top: 4rem !important;
+        overflow: visible !important;
+    }
+  }
+  
+  
+  //ancho-individual
+  .sliderItemInfo6 {
+  width: 17rem;
+  // background-color: white;
+  position: relative;
+  height: auto;
+  border-radius: 1rem;
+  display: grid;
+  // background-color: green;
+  justify-items: center;
+  z-index: 3;
+  @include m.phone_360 {
+    // width: 64%;
+  }
+  @include m.phone_375 {
+    // width: 61%;
+  }
+  @include m.phone_390 {
+    // width: 58%;
+  }
+  @include m.phone_400 {
+    // width: 56%;
+  }
+  @include m.phone_428 {
+    // height: 24rem;
+    // width: 54%;
+  }
+  @include m.phone_480 {
+    // width: 45%;
+  }
+  @include m.tablet_760 {
+    // width: 80%;
+  }
+  @include m.desktop_1020 {
+    height: 23rem;
+    // width: 85%;
+  }
+  @include m.desktop_1220 {
+    height: 26rem;
+    // width: 93%;
+  }
+  }
+
+  .sliderItemInfoContainerTwo {
+    grid-template-rows: 10rem 8rem !important;
+  }
+  
+  .sliderItemInfo6Container {
+    // background-color: purple;
+    // color: white;
+    height: auto;
+    display: grid;
+    grid-template-rows: 21rem 4rem;
+    row-gap: 1.5rem;
+    h3 {
+        color: black;
+        margin: 0;
+        font-size: 1.8rem;
+        text-align: center;
+        font-weight: 800;
+        padding-top: 1rem;
+    }
+  }
+  .sliderItemInfoContainerTopSeparator {
+    // background-color: orange;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    .sliderItemInfoContainerTopSeparatorContainer {
+      border-bottom: 1px solid black;
+      width: 15rem;
+      height: 100%;
+    }
+  }  
+  .swiper-pagination6 {
+    width: 20rem;
+    height: 3rem;
+    position: relative;
+    // background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 15rem !important;
+    z-index: 800;
+    // @include m.phone_360 {
+    //     bottom: 2.5rem !important;
+    // }
+    // @include m.phone_375 {
+    //     bottom: 6.5rem !important;
+    // }
+    // @include m.phone_414 {
+    //     bottom: 4rem !important;
+    // }
+    // @include m.desktop_1020 {
+    //     bottom: 5rem !important;
+    // }
+    // @include m.desktop_1220 {
+    //     bottom: 1rem !important;
+    // }
+  }
+  
+  .swiper-arrows4 {
+    // background-color: orange;
+    position: absolute;
+    // background-color: orange;
+    width: 100%;
+    text-align: center;
+    bottom: -25%;
+    h3 {
+      margin: 0;
+      font-size: 4rem;
+      font-weight: 100;
+      color: black;
+      z-index: 30;
+      position: relative;
+      // z-index: 201;
+    }
+  }
+  
+  .swiper-button-next6 {
+    // height: 4.5rem;
+    width: auto;
+    color: black !important;
+    // position: absolute !important;
+    // background-color: green;
+    // bottom: 30%;
+    // text-align: center;
+    text-rendering: auto;
+    z-index: 30;
+    position: absolute;
+    right: 41%;
+    bottom: -22%;
+    // @include m.phone_380 {
+    //     right: 3rem !important;
+    // }
+    // @include m.tablet_768 {
+    //     right: 5rem !important;
+    // }
+    // @include m.desktop_1020 {
+    //     right: -2rem !important;
+    // }
+    // @include m.desktop_1360 {
+    //     right: -4rem !important;
+    //     top: 47%;
+    // }
+    img {
+      width: 1.3rem;
+    }
+  }
+  
+  .swiper-button-prev6 {
+    // height: 4.5rem;
+    // background-color: red;
+    width: auto;
+    color: black !important;
+    position: absolute;
+    // left: 2rem !important;
+    text-rendering: auto;
+    z-index: 30;
+    position: absolute;
+    left: 41%;
+    bottom: -22%;
+    // @include m.phone_380 {
+    //     left: 3rem !important;
+    // }
+    // @include m.tablet_768 {
+    //     left: 5rem !important;
+    // }
+    // @include m.desktop_1020 {
+    //     left: -2rem !important;
+    // }
+    // @include m.desktop_1360 {
+    //     left: -4rem !important;
+    // }
+    // @include m.desktop_1360 {
+    //     top: 47%;
+    // }
+    img {
+      width: 1.3rem;
+    }
+  }

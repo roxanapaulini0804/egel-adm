@@ -1,0 +1,37 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+footer {
+    background-color: black;
+    height: auto;
+    padding: 3rem;
+    @include m.tablet_768 {
+        padding: 5rem;
+    }
+}
+
+.footerContainer {
+    height: auto;
+    display: grid;
+    grid-template-rows: 8rem 6rem;
+    @include m.tablet_768 {
+        display: flex;
+        justify-content: space-between;
+    }
+    img {
+        width: 20rem;
+        @include m.tablet_768 {
+            width: 25rem;
+        }
+    }
+    h3 {
+        margin: 0;
+        color: white;
+        font-size: 1.4rem;
+        font-weight: 400;
+        @include m.tablet_768 {
+            display: flex;
+            align-items: center;
+        }
+    }
+}

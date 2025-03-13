@@ -1,0 +1,347 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.bloque6 {
+    // background-color: rgba(128, 0, 128, 0.227);
+    height: auto;
+    // padding: 7rem 0;
+    position: relative;
+    background-color: white;
+    overflow: hidden;
+    padding-top: 7rem;
+    @include m.desktop_1020 {
+        padding: 10rem 0;
+    }
+}
+
+.bloque6ShieldBack {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    bottom: -15rem;
+    @include m.phone_375 {
+        bottom: -18rem;
+    }
+    @include m.tablet_768 {
+        display: none;
+    }
+}
+
+.bloque6ShieldBackDesktop {
+    display: none;
+    @include m.tablet_768 {
+        display: block;
+        position: absolute;
+        width: 60rem;
+        bottom: 0;
+        right: -9rem;
+    }
+    @include m.desktop_1020 {
+        width: 75rem;
+    }
+    @include m.desktop_1100 {
+        width: 83rem;
+    }
+    @include m.desktop_1200 {
+        bottom: -7rem;
+        width: 90rem;
+    }
+    @include m.desktop_1300 {
+        width: 95rem;
+        bottom: 0;
+    }
+    @include m.desktop_1400 {
+        width: 105rem;
+        bottom: -10rem;
+    }
+    @include m.desktop_1600 {
+        width: 113rem;
+    }
+    @include m.desktop_1800 {
+        width: 120rem;
+    }
+}
+
+.bloque6Container {
+    position: relative;
+    z-index: 2;
+    height: 67rem;
+    @include m.phone_380 {
+        height: 65rem;
+    }
+    @include m.tablet_768 {
+        height: auto;
+        display: grid;
+        grid-template-columns: 1.5fr 2fr;
+        padding: 0 5rem;
+    }
+    @include m.desktop_1020 {
+        padding: 0 8rem;
+        position: block;
+    }
+    @include m.desktop_1200 {
+        padding: 0 12rem;
+    }
+    @include m.desktop_1300 {
+        padding: 0 15rem;
+    }
+    @include m.desktop_1800 {
+        padding: 0 30rem;    
+    }
+}
+
+.bloque6ContainerTop {
+    // background-color: green;
+    height: auto;
+    display: grid;
+    justify-items: center;
+    row-gap: 1rem;
+    color: black;
+    @include m.tablet_760 {
+        display: block;
+        justify-items: flex-start;
+    }
+    h3, h4 {
+        text-align: center;
+        margin: 0;
+        width: 70%;
+        @include m.tablet_760 {
+            width: 100%;
+            text-align: start;
+        }
+    }
+    h3 {
+        font-size: 2.5rem;
+        font-weight: 500;
+        padding: 0;
+        margin: 0;
+        @include m.tablet_768 {
+        font-size: 3rem;
+
+        }
+        @include m.desktop_1020 {
+        font-size: 3.8rem;
+        width: 40rem;
+            
+            
+        }
+        @include m.desktop_1120 {
+            width:40rem;
+        }
+        
+        span {
+            font-weight: 800;
+        }
+    }
+    h4 {
+        font-weight: 500;
+        font-size: 1.5rem;
+        @include m.tablet_760 {
+            // font-size: 1.5rem;
+            width: 70%;
+            padding-top: 1rem;
+        }
+        @include m.desktop_1020 {
+            width: 58%;
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.bloque6Desktop {
+    @include m.tablet_760 {
+        position: relative;
+        height: 40rem;
+        display: grid;
+        align-items: flex-end;
+        justify-items: flex-end;
+    }
+    @include m.desktop_1020 {
+        position: unset;
+    }
+    @include m.desktop_1300 {
+        height: 55rem;
+    }
+}
+
+.bloque6Image  {
+    // background-color: rgba(0, 128, 0, 0.429);
+    margin-top: 6rem;
+    text-align: center;
+    @include m.tablet_768 {
+        margin: 0;
+        position: absolute;
+        bottom: 11rem;
+        left: -17%;
+    }
+    @include m.tablet_840 {
+        left: calc(100% - 103%);
+    }
+    @include m.tablet_920 {
+        left: -1%
+    }
+    @include m.desktop_1020 {
+        // background-color: red;
+        left: 0;
+        width: 100%;
+    }
+    img {
+        width: 15rem;
+        @include m.tablet_768 {
+            width: 20rem;
+        }
+        @include m.desktop_1200 {
+            width: 25rem;
+        }
+    }
+}
+
+.bloque6Description {
+    // background-color: purple;
+    height: auto;
+    display: grid;
+    grid-template-rows: auto 22rem;
+    margin-top: 4rem;
+    @include m.tablet_768 {
+        position: relative;
+        margin: 0;
+        grid-template-rows: auto 13rem;
+        width: 35rem;
+        right: -5rem;
+        // bottom: 10rem;
+    }
+    @include m.desktop_1020 {
+        // bottom: 5rem;
+        width: 38rem;
+    }
+    @include m.desktop_1100 {
+        width: 43rem;
+    }
+    @include m.desktop_1200 {
+        width: 40rem;
+    }
+    @include m.desktop_1300 {
+        width: 41rem;
+    }
+    @include m.desktop_1400 {
+        width: 48rem;
+    }
+    @include m.desktop_1500 {
+        width: 53rem;    
+    }
+    @include m.desktop_1600 {
+        width: 58rem;
+    }
+    @include m.desktop_1700 {
+        width: 67rem;    
+    }
+    @include m.desktop_1800 {
+        width: 52rem;
+    }
+    @include m.desktop_1900 {
+        width: 58rem;
+    }
+    .bloque6DescriptionTop {
+        // background-color: orange;
+        display: grid;
+        justify-items: center;
+        position: relative;
+        color: black;
+        h3, h4 {
+            margin: 0;
+            width: 80%;
+        }
+        h3 {
+            font-size: 2rem;
+            text-align: center;
+            font-weight: 500;
+            @include m.desktop_1020 {
+            text-align: start;
+            margin-top: 5rem;
+            }
+            @include m.desktop_1200 {
+               
+                margin-top: 10rem;
+                }
+
+
+            }
+        h4 {
+            font-size: 1.6rem;
+            padding: 1rem 0;
+            text-align: center;
+            line-height: 1;
+            
+            @include m.desktop_1020 {
+            text-align: start;
+            width: 20rem;
+            margin-right:10rem;
+            }
+
+            @include m.desktop_1100{
+            margin-right:14rem;
+            }
+
+            @include m.desktop_1200{
+            margin-right:12rem;
+            }
+            @include m.desktop_1400{
+                margin-right:18rem;
+                }
+            @include m.desktop_1500{
+            margin-right:22rem;
+            }
+            @include m.desktop_1500{
+            margin-right:23rem;
+            }
+            @include m.desktop_1700{
+                margin-right:33rem;
+                }
+           
+            
+        }
+    }
+    .bloque6DescriptionBottom {
+        padding: 1rem;
+        display: grid;
+        justify-items: center;
+        color: black;
+        h3 {
+            margin: 0;
+            width: 70%;
+            text-align: center;
+            font-weight: 600;
+            line-height: 1.4;
+            font-size: 1.1rem;
+           @include m.tablet_768 {
+            font-size: 1.3rem;
+           }
+           @include m.desktop_1020 {
+            text-align: start;
+            width: 83%;
+            }
+        }
+    }
+}
+
+.bloque6DescriptionTopSeparator {
+    // background-color: green;
+    width: 100%;
+    position: absolute;
+    height: 3rem;
+    bottom: 0;
+    display: grid;
+    justify-content: center;
+    @include m.desktop_1020 {
+        justify-content: flex-start;
+        padding-left: 10%;
+    }
+    .bloque6DescriptionTopSeparatorBlock {
+        // background-color: pink;
+        margin-top: 20rem;
+        width: 18rem;
+        height: 100%;
+        border-bottom: 1px solid black;
+    }
+}
