@@ -209,25 +209,124 @@
       overflow: visible !important;
     }
   }
-  
-  
-//ancho-individual
-.sliderItemInfo2 {
-  width: 25rem;
-  position: relative;
-  height: auto;
-  display: flex;
-  // background-color: green;
-  justify-items: center;
-  flex-direction: column;
-  .sliderItemInfo2--desc {
-    padding: 1rem;
-    font-size: 1.4rem;
-    text-align: center;
-    font-weight: 550;
-  }
-}
 
+
+ 
+  .sliderItemInfo2 {
+    width: 100%;
+    max-width: 25rem;
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+
+    @include m.desktop_1020 {
+        align-items: flex-start;
+        text-align: left;
+        max-width: 40rem;
+        margin: 0 auto;
+        gap: 0.5rem;
+    }
+
+    // SECCIÓN DEL NÚMERO Y TEXTO
+    .sliderItemInfo2--top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include m.desktop_1020 {
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 0.5rem;
+        }
+
+        h3 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.3rem;
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: black;
+            margin-bottom: 0;
+
+            @include m.desktop_1020 {
+                font-size: 4rem;
+                justify-content: flex-start;
+            }
+
+            span {
+                font-size: 5rem;
+                font-weight: 900;
+                color: black;
+
+                @include m.desktop_1020 {
+                    font-size: 5.5rem;
+                }
+            }
+        }
+        
+        h4 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: black;
+            margin-top: 0;
+
+            @include m.desktop_1020 {
+                font-size: 1.8rem;
+                display: inline-block;
+                margin-left: 0.5rem;
+                margin-top: 5.5rem;
+            }
+        }
+    }
+
+    // DESCRIPCIÓN
+    .sliderItemInfo2--desc {
+        font-size: 1.2rem;
+        font-weight: 550;
+        padding: 1rem;
+        max-width: 22rem;
+        color: black;
+        margin-top: 0.5rem;
+
+        @include m.desktop_1020 {
+            max-width: 80%;
+            font-size: 1.4rem;
+            margin-top: -2rem;
+        }
+    }
+
+    // LÍNEA PARA MÓVIL (Antes de la descripción)
+    .sliderItemInfo2--line-movile {
+        display: block;
+        width: 100%;
+        border-top: 2px solid black;
+        margin-bottom: 1rem; // Espacio antes de la descripción
+
+        @include m.desktop_1020 {
+            display: none; // Se oculta en desktop
+        }
+    }
+
+    // LÍNEA PARA DESKTOP (Después de la descripción)
+    .sliderItemInfo2--line-desktop {
+        display: none; // Oculta en móvil
+
+        @include m.desktop_1020 {
+            display: block;
+            width: 100%;
+            max-width: 30rem;
+            border-top: 2px solid black;
+            margin-top: 1rem; // Espacio después de la descripción
+        }
+    }
+}
 .swiper-arrows2 {
   // background-color: orange;
   position: relative;
