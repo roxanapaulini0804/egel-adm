@@ -2,7 +2,9 @@
 @use 'base/mixins' as m;
 
 .bloque6 {
+    // background-color: rgba(128, 0, 128, 0.227);
     height: auto;
+    // padding: 7rem 0;
     position: relative;
     background-color: white;
     overflow: hidden;
@@ -15,8 +17,9 @@
 .bloque6ShieldBack {
     width: 100%;
     position: absolute;
-    bottom: -15rem;
+    bottom: 0;
     z-index: 1;
+    bottom: -15rem;
     @include m.phone_375 {
         bottom: -18rem;
     }
@@ -71,24 +74,39 @@
         height: auto;
         display: grid;
         grid-template-columns: 1.5fr 2fr;
-        padding: 0 5rem;
+        // padding: 0 5rem;
     }
     @include m.desktop_1020 {
-        padding: 0 8rem;
+        padding: 0 5rem;
         position: block;
     }
     @include m.desktop_1200 {
-        padding: 0 12rem;
+        padding: 0 8rem;
+        
     }
     @include m.desktop_1300 {
-        padding: 0 15rem;
+        padding: 0 10rem;
+    }
+    @include m.desktop_1320 {
+        padding: 0 11rem;
+    }
+    @include m.desktop_1400 {
+        padding: 0 15rem;    
+    }
+    @include m.desktop_1600 {
+        padding: 0 13rem;    
     }
     @include m.desktop_1800 {
-        padding: 0 30rem;    
+        padding: 0 15rem;    
+    }
+
+    @include m.desktop_1820 {
+        padding: 0 16rem;    
     }
 }
 
 .bloque6ContainerTop {
+    // background-color: green;
     height: auto;
     display: grid;
     justify-items: center;
@@ -97,10 +115,6 @@
     @include m.tablet_760 {
         display: block;
         justify-items: flex-start;
-    }
-    @include m.desktop_1020 {
-        text-align: left;
-        padding-left: 3rem;
     }
     h3, h4 {
         text-align: center;
@@ -114,17 +128,19 @@
     h3 {
         font-size: 2.5rem;
         font-weight: 500;
-        padding: 0;
-        margin: 0;
         @include m.tablet_768 {
             font-size: 3rem;
         }
         @include m.desktop_1020 {
-            font-size: 4.2rem;
+            font-size: 4.5rem;
             width: 45rem;
         }
-        @include m.desktop_1120 {
-            width: 45rem;
+        span {
+            font-weight: 800;
+        }
+        @include m.desktop_1300 {
+            font-size: 4.5rem;
+            width: 40rem;
         }
         span {
             font-weight: 800;
@@ -134,12 +150,13 @@
         font-weight: 500;
         font-size: 1.5rem;
         @include m.tablet_760 {
+            // font-size: 1.5rem;
             width: 70%;
             padding-top: 1rem;
         }
         @include m.desktop_1020 {
             width: 58%;
-            font-size: 2rem;
+            font-size: 1.8rem;
         }
     }
 }
@@ -161,6 +178,7 @@
 }
 
 .bloque6Image  {
+    // background-color: rgba(0, 128, 0, 0.429);
     margin-top: 6rem;
     text-align: center;
     @include m.tablet_768 {
@@ -169,7 +187,14 @@
         bottom: 11rem;
         left: -17%;
     }
+    @include m.tablet_840 {
+        left: calc(100% - 103%);
+    }
+    @include m.tablet_920 {
+        left: -1%
+    }
     @include m.desktop_1020 {
+        // background-color: red;
         left: 0;
         width: 100%;
     }
@@ -185,6 +210,7 @@
 }
 
 .bloque6Description {
+    // background-color: purple;
     height: auto;
     display: grid;
     grid-template-rows: auto 22rem;
@@ -195,10 +221,92 @@
         grid-template-rows: auto 13rem;
         width: 35rem;
         right: -5rem;
+        bottom: 10rem;
+    }
+    @include m.desktop_1020 {
+        bottom: 5rem;
+        width: 38rem;
+    }
+    @include m.desktop_1100 {
+        width: 43rem;
+    }
+    @include m.desktop_1200 {
+        width: 40rem;
+    }
+    @include m.desktop_1300 {
+        width: 41rem;
+    }
+    @include m.desktop_1400 {
+        width: 48rem;
+    }
+    @include m.desktop_1500 {
+        width: 53rem;    
+    }
+    @include m.desktop_1600 {
+        width: 58rem;
+    }
+    @include m.desktop_1700 {
+        width: 67rem;    
+    }
+    @include m.desktop_1800 {
+        width: 52rem;
+    }
+    @include m.desktop_1900 {
+        width: 58rem;
+    }
+    .bloque6DescriptionTop {
+        // background-color: orange;
+        display: grid;
+        justify-items: center;
+        position: relative;
+        color: black;
+        h3, h4 {
+            margin: 0;
+            width: 80%;
+        }
+        h3 {
+            font-size: 2rem;
+            text-align: center;
+            font-weight: 500;
+            @include m.desktop_1020 {
+                text-align: start;
+            }
+        }
+        h4 {
+            font-size: 1.6rem;
+            padding: 1rem 0;
+            text-align: center;
+            line-height: 1;
+            @include m.desktop_1020 {
+                text-align: start;
+            }
+        }
+    }
+    .bloque6DescriptionBottom {
+        padding: 1rem;
+        display: grid;
+        justify-items: center;
+        color: black;
+        h3 {
+            margin: 0;
+            width: 70%;
+            text-align: center;
+            font-weight: 600;
+            line-height: 1.4;
+            font-size: 1.1rem;
+           @include m.tablet_768 {
+            font-size: 1.3rem;
+           }
+           @include m.desktop_1020 {
+            text-align: start;
+            width: 83%;
+            }
+        }
     }
 }
 
 .bloque6DescriptionTopSeparator {
+    // background-color: green;
     width: 100%;
     position: absolute;
     height: 3rem;
@@ -210,7 +318,7 @@
         padding-left: 10%;
     }
     .bloque6DescriptionTopSeparatorBlock {
-        margin-top: 20rem;
+        // background-color: pink;
         width: 18rem;
         height: 100%;
         border-bottom: 1px solid black;

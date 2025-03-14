@@ -84,7 +84,7 @@
       text-align: start;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: start;
     }
     h3 {
       padding: 0;
@@ -101,6 +101,19 @@
       span {
         font-weight: 700;
       }
+
+      @include m.desktop_1020 {
+        width: 36rem;
+        font-size: 5rem;
+        z-index: 1;
+      }
+      span {
+        font-weight: 700;
+      }
+
+
+
+
     }
   }
 
@@ -251,19 +264,37 @@
             justify-content: center;
             gap: 0.3rem;
             font-size: 3.5rem;
-            font-weight: 900;
-            color: black;
+            
+            color: white;
             margin-bottom: 0;
+            
+             
+            @include m.phone_320{
+              font-size: 8rem;
+              margin-top: 1rem;
+              font-weight: 300;
+             
+              
+          }
+
 
             @include m.desktop_1020 {
-                font-size: 4rem;
+                font-size: 5rem;
                 justify-content: flex-start;
+                color:black;
+                font-weight: 500;
             }
 
             span {
                 font-size: 5rem;
-                font-weight: 900;
+                font-weight: 500;
                 color: black;
+
+                @include m.phone_320{
+                  font-size: 8rem;
+                 
+                  
+              }
 
                 @include m.desktop_1020 {
                     font-size: 5.5rem;
@@ -275,16 +306,53 @@
             font-size: 1.6rem;
             font-weight: 700;
             color: black;
-            margin-top: 0;
+            
+            @include m.phone_320{
+              font-size: 1.8rem;
+              margin-top: 1rem;
+              color: white;
+              margin-top: -1rem;
+              
+          }
+          
 
             @include m.desktop_1020 {
-                font-size: 1.8rem;
+                font-size: 2rem;
                 display: inline-block;
                 margin-left: 0.5rem;
-                margin-top: 5.5rem;
+                margin-top: 4.3rem;
+                color: black;
             }
+
+            span {
+              font-size: 2rem;
+              color: black;
+
+              @include m.desktop_1020{
+                
+               font-weight:100;
+               
+                
+            }
+             
+          
         }
     }
+  }
+
+    .sliderItemInfo2--top--final {
+      
+      @include m.phone_320 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-top: 6rem;
+         
+      }
+
+      
+  }
+
 
     // DESCRIPCIÓN
     .sliderItemInfo2--desc {
@@ -305,9 +373,10 @@
     // LÍNEA PARA MÓVIL (Antes de la descripción)
     .sliderItemInfo2--line-movile {
         display: block;
-        width: 100%;
+        width: 80%;
         border-top: 2px solid black;
-        margin-bottom: 1rem; // Espacio antes de la descripción
+        margin-top: -2rem;
+        margin-bottom: -1rem; // Espacio antes de la descripción
 
         @include m.desktop_1020 {
             display: none; // Se oculta en desktop
