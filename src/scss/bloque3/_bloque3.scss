@@ -133,6 +133,20 @@
     overflow: visible;
     width: 100% !important;
   }
+  @include m.desktop_1500 {
+   
+    width: 110% !important;
+  }
+  @include m.desktop_1500 {
+   
+    width: 120% !important;
+  }
+  
+  @include m.desktop_1800 {
+   
+    width: 125% !important;
+  }
+  
 }
 
 .bloque3SliderContainerFloat {
@@ -249,6 +263,16 @@
     
     }
 
+    @include m.desktop_1800 {
+      align-items: flex-start;
+      text-align: left;
+      max-width: 60rem;
+      margin: 0 auto;
+      gap: 0.5rem;
+  
+  }
+
+
     // SECCIÓN DEL NÚMERO Y TEXTO
     .sliderItemInfo2--top {
         display: flex;
@@ -286,7 +310,7 @@
 
 
             @include m.desktop_1020 {
-                font-size: 5rem;
+                font-size: 6rem;
                 justify-content: flex-start;
                 color:black;
                 font-weight: 500;
@@ -327,8 +351,10 @@
                 font-size: 2rem;
                 display: inline-block;
                 margin-left: 0.5rem;
-                margin-top: 4.3rem;
+                margin-top: 10%;
                 color: black;
+               
+               
             }
 
             span {
@@ -379,10 +405,13 @@
         margin-top: 0.5rem;
 
         @include m.desktop_1020 {
-            max-width: 80%;
-            font-size: 1.4rem;
+            max-width: 100%;
+            font-size:2rem;
             margin-top: -2rem;
+            font-weight: 300;
         }
+
+        
     }
 
     // LÍNEA PARA MÓVIL (Antes de la descripción)
@@ -390,7 +419,7 @@
         display: block;
         width: 80%;
         border-top: 2px solid black;
-        margin-top: -2rem;
+        margin-top: 2%;
         margin-bottom: -1rem; // Espacio antes de la descripción
 
         @include m.desktop_1020 {
@@ -405,7 +434,7 @@
         @include m.desktop_1020 {
             display: block;
             width: 100%;
-            max-width: 30rem;
+            max-width: 60rem;
             border-top: 2px solid black;
             margin-top: 1rem; // Espacio después de la descripción
         }
