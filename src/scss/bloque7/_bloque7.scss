@@ -48,16 +48,16 @@
         height: auto;       // auto-ajuste para mantener proporciones
         transform: translate(-50%, -50%) scale(1.9); // centrado perfecto y escala inicial
         
-        @include m.phone_320 {
-            transform: translate(-50%, -50%) scale(1.2); // más alejado para móvil pequeño
-        }
-        @include m.phone_375 {
-            transform: translate(-50%, -50%) scale(1.2); // ajusta según el resultado visual
-        }
-        @include m.phone_390 {
-            // transform: scale(2.1);
-            ransform: translate(-50%, -50%) scale(1.2);
-        }
+        // @include m.phone_320 {
+        //     transform: translate(-50%, -50%) scale(1.2); // más alejado para móvil pequeño
+        // }
+        // @include m.phone_375 {
+        //     transform: translate(-50%, -50%) scale(1.2); // ajusta según el resultado visual
+        // }
+        // @include m.phone_390 {
+        //     // transform: scale(2.1);
+        //     ransform: translate(-50%, -50%) scale(1.2);
+        // }
         // @include m.tablet_768 {
         //     transform: scale(1.4);
         //     // transform: translate(-50%, -50%) scale(1.4); 
@@ -79,7 +79,16 @@
         //     padding-top: 4rem;
         //     transform: scale(2.05);
         // }
-
+         
+        @include m.phone_320 {
+            transform: translate(-50%, -50%) scale(1);
+        }
+        @include m.phone_375 {
+            transform: translate(-50%, -50%) scale(1);
+        }
+        @include m.phone_390 {
+            transform: translate(-50%, -50%) scale(1);
+        }
         @include m.tablet_768 {
             transform: translate(-50%, -50%) scale(1.1); // Aleja bastante respecto a 1.4 original
         }
