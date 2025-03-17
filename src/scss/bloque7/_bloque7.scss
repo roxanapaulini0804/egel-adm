@@ -7,6 +7,7 @@
     overflow: hidden;
     position: relative;
     height: 60rem;
+    background-color: black; // Previene espacios grises visibles
     @include m.phone_375 {
         height: 70rem;
     }
@@ -34,31 +35,73 @@
         min-height: 110rem;  
     }
     video {
-        height: 100%;
-        width: 100%;
-        transform: scale(1.9);
-        z-index: -1;
+        // height: 100%;
+        // width: 100%;
+        // transform: scale(1.9);
+        // z-index: -1;
+        position: absolute; // agrega esto
+        top: 50%;           // centra verticalmente
+        left: 50%;          // centra horizontalmente
+        min-width: 100%;    // asegura que cubra al menos todo el ancho
+        min-height: 100%;   // asegura que cubra al menos todo el alto
+        width: auto;        // auto-ajuste para mantener proporciones
+        height: auto;       // auto-ajuste para mantener proporciones
+        transform: translate(-50%, -50%) scale(1.9); // centrado perfecto y escala inicial
+        
+        @include m.phone_320 {
+            transform: translate(-50%, -50%) scale(1.2); // más alejado para móvil pequeño
+        }
+        @include m.phone_375 {
+            transform: translate(-50%, -50%) scale(1.2); // ajusta según el resultado visual
+        }
         @include m.phone_390 {
-            transform: scale(2.1);
+            // transform: scale(2.1);
+            ransform: translate(-50%, -50%) scale(1.2);
         }
+        // @include m.tablet_768 {
+        //     transform: scale(1.4);
+        //     // transform: translate(-50%, -50%) scale(1.4); 
+        // }
+        // @include m.desktop_1200 {
+        //     padding-top: 2.5rem;
+        //     transform: scale(1.82);
+        //     // transform: translate(-50%, -50%) scale(1.82);
+        // }
+        // @include m.desktop_1600 {
+        //     padding-top: 3rem;
+        //     transform: scale(2);    
+        // }
+        // @include m.desktop_1660 {
+        //     padding-top: 5rem;
+        //     transform: scale(2.1);
+        // }
+        // @include m.desktop_1900 {
+        //     padding-top: 4rem;
+        //     transform: scale(2.05);
+        // }
+
         @include m.tablet_768 {
-            transform: scale(1.4);
+            transform: translate(-50%, -50%) scale(1.1); // Aleja bastante respecto a 1.4 original
         }
+        
         @include m.desktop_1200 {
             padding-top: 2.5rem;
-            transform: scale(1.82);
+            transform: translate(-50%, -50%) scale(1.3); // Aleja considerablemente respecto a 1.82 original
         }
+        
         @include m.desktop_1600 {
             padding-top: 3rem;
-            transform: scale(2);    
+            transform: translate(-50%, -50%) scale(1.5); // Aleja respecto al 2 original
         }
+        
         @include m.desktop_1660 {
             padding-top: 5rem;
-            transform: scale(2.1);
+            transform: translate(-50%, -50%) scale(1.6); // Aleja respecto al 2.1 original
         }
+        
         @include m.desktop_1900 {
             padding-top: 4rem;
-            transform: scale(2.05);
+            transform: translate(-50%, -50%) scale(1.55); // Aleja respecto al 2.05 original
         }
     }
 }
@@ -90,7 +133,9 @@
             font-size: 5rem;
         }
         @include m.desktop_1600 {
-            font-size: 9rem;
+            font-size: 5rem;
+            width: 50%;
+            
         }
     }
 }

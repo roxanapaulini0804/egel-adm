@@ -84,7 +84,9 @@
       text-align: start;
       display: flex;
       align-items: center;
-      justify-content: start;
+      // justify-content: start;
+
+      justify-content: flex-start;
     }
     h3 {
       padding: 0;
@@ -194,6 +196,8 @@
       justify-content: center;
       flex-direction: column;
       row-gap: .5rem;
+
+    
     }
     @include m.desktop_1300 {
       row-gap: 1rem;
@@ -242,6 +246,7 @@
         max-width: 40rem;
         margin: 0 auto;
         gap: 0.5rem;
+    
     }
 
     // SECCIÓN DEL NÚMERO Y TEXTO
@@ -256,6 +261,8 @@
             align-items: center;
             justify-content: flex-start;
             gap: 0.5rem;
+
+            
         }
 
         h3 {
@@ -346,12 +353,20 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          padding-top: 6rem;
+          padding-top: 6rem; // Mantienes esto para móvil
          
       }
 
       
+    @include m.desktop_1020 {
+      padding-top: 0 !important; // Esto corrige el exceso de espacio solo en desktop
   }
+
+     
+
+      
+  }
+   
 
 
     // DESCRIPCIÓN
